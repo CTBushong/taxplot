@@ -1,6 +1,7 @@
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 console.log(`Using environment config: '${activeEnv}'`)
+
 require("dotenv").config({
   path: `.env.${activeEnv}`,
 })
@@ -10,7 +11,7 @@ module.exports = {
     title: `TaxPlot`,
     name: `TaxPlot`,
     siteUrl: `https://taxplot.com`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: `TaxPlot is a silly tax project by Chris Bushong`,
     hero: {
       heading: `Welcome to TaxPlot.`,
       maxWidth: 652,
@@ -39,7 +40,6 @@ module.exports = {
     ],
   },
   plugins: [
-    
     {
       resolve: "gatsby-theme-firebase",
       options: {
@@ -73,8 +73,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `TaxPlot`,
+        short_name: `TaxPlot`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,

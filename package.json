@@ -10,6 +10,8 @@
     "proxy": "netlify-cms-proxy-server"
   },
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "@narative/gatsby-theme-novela": "^0.*",
     "gatsby": "^2.23.3",
     "gatsby-cli": "^2.12.45",
