@@ -8,6 +8,7 @@ exports.newUserSignUp = functions.auth.user().onCreate(user => {
   return admin.firestore().collection('users').doc(user.uid).set({
     email: user.email,
     displayName: user.displayName,
+    isAdmin: false,
     
   });
 });

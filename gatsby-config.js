@@ -39,7 +39,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
+  plugins: [ 
     {
       resolve: "gatsby-theme-firebase",
       options: {
@@ -57,19 +57,21 @@ module.exports = {
         socialLogins: ["google"],
       },
     },
-    {
-      resolve: "@narative/gatsby-theme-novela",
-      options: {
-        contentPosts: "content/posts",
-        contentAuthors: "content/authors",
-        basePath: "/",
-        authorsPage: true,
-        sources: {
-          local: true,
-          // contentful: true,
+        {
+          resolve: "@narative/gatsby-theme-novela",
+          options: {
+            contentPosts: "content/posts",
+            contentAuthors: "content/authors",
+            basePath: "/",
+            authorsPage: true,
+            sources: {
+              local: true,
+              // contentful: true,
+            },
+          },
         },
-      },
-    },
+        
+ 
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -82,10 +84,6 @@ module.exports = {
         icon: `src/assets/favicon.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-      },
-    },
+   
   ],
 };

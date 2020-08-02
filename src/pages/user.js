@@ -1,38 +1,44 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { GlobalStateContext } from '../components/UserContext'
+
 
 import Layout from "@narative/gatsby-theme-novela/src/components/Layout";
-import Section from "@narative/gatsby-theme-novela/src/components/Section";
 import Headings from "@narative/gatsby-theme-novela/src/components/Headings";
-import Button from '@material-ui/core/Button';
+import { navigate } from 'gatsby';
 
 
 import { auth, useAuth } from "gatsby-theme-firebase";
 
 
 function UserPage() {
-    const { isLoggedIn, profile } = useAuth();
-    
-    let something;
-    if (isLoggedIn) 
-      something = profile.displayName
-    else 
-      something = "Who is this?"
-    
+  const { userState } = useContext(GlobalStateContext)
+
+  useEffect(() => {
+    if (userState.loggedIn) {
+      
+    }
+    else {
+      
+    }
+  }, [userState]);
 
 
-    
+  function AdminButton() {
+
+  }
+  
+  const something = "something something something"
+
   return (
     <Layout>
-      <Section>
         <div style={{ marginTop: "100px" }}>
           <Headings.h1>{something}</Headings.h1>
-          <Button 
+          <button 
             onClick={() => auth.signOut()}
           >
           Sign Out
-          </Button>
+          </button>
         </div>
-      </Section>
     </Layout>
   );
 }
