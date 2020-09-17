@@ -1,3 +1,5 @@
+require('regenerator-runtime/runtime');
+
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 console.log(`Using environment config: '${activeEnv}'`)
@@ -8,34 +10,26 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `TaxPlot`,
-    name: `TaxPlot`,
+    title: `tax·plot`,
+    name: `tax·plot`,
     siteUrl: `https://taxplot.com`,
-    description: `TaxPlot is a silly tax project by Chris Bushong`,
+    description: `tax·plot is a silly tax project by Chris Bushong`,
     hero: {
-      heading: `Welcome to TaxPlot.`,
+      heading: `Welcome to tax·plot`,
       maxWidth: 652,
     },
     social: [
       {
-        name: `twitter`,
-        url: `https://twitter.com/narative`,
-      },
-      {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/ctbushong `,
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
+        url: `https://instagram.com/thebushong`,
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://www.linkedin.com/in/chris-bushong-1903b07/`,
       },
     ],
   },
@@ -75,8 +69,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `TaxPlot`,
-        short_name: `TaxPlot`,
+        name: `tax·plot`,
+        short_name: `tax·plot`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,

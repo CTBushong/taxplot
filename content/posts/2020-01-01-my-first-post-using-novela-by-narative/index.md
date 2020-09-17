@@ -1,6 +1,6 @@
 ---
 title: My first post using Novela by Narative
-author: Dennis Brotzky
+author: Chris Bushong
 date: 2020-04-30
 premium: FALSE
 hero: ./images/hero.jpg

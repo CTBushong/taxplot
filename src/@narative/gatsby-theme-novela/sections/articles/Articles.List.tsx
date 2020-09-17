@@ -3,11 +3,14 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 
-import Headings from '@components/Headings';
-import Image, { ImagePlaceholder } from '@components/Image';
+import Headings from '../../components/Headings';
+import Image, { ImagePlaceholder } from '../../../../../node_modules/@narative/gatsby-theme-novela/src/components/Image';
 
-import mediaqueries from '@styles/media';
-import { IArticle } from '@types';
+
+import mediaqueries from '../../styles/media';
+import { IArticle } from '../../../../../node_modules/@narative/gatsby-theme-novela/src/types';
+
+//import { IArticle } from '@types';
 
 import { GridLayoutContext } from './Articles.List.Context'
 
@@ -119,7 +122,7 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
             {article.excerpt}
           </Excerpt>
           <MetaData>
-            {premContent} · {article.timeToRead} min readxxx
+            {article.date}
           </MetaData>
         </div>
       </Item>
@@ -281,7 +284,7 @@ const ImageContainer = styled.div<{ narrow: boolean; gridLayout: string }>`
 
 const Title = styled(Headings.h2)`
   font-size: 21px;
-  font-family: ${p => p.theme.fonts.serif};
+  font-family: monospace;
   margin-bottom: ${p =>
     p.hasOverflow && p.gridLayout === 'tiles' ? '35px' : '10px'};
   transition: color 0.3s ease-in-out;
@@ -334,7 +337,7 @@ const Excerpt = styled.p<{
 const MetaData = styled.div`
   font-weight: 600;
   font-size: 16px;
-  color: ${p => p.theme.colors.grey};
+  color: grey;
   opacity: 0.33;
 
   ${mediaqueries.phablet`

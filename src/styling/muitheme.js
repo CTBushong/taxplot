@@ -15,9 +15,9 @@ export const theme = createMuiTheme({
     },
     typography: {
         fontFamily: [
+          'monospace',
           'Courier New',
-          'Courier',
-          'monospace'
+          'Courier'
         ],
         button: {
           fontSize: '2rem',
